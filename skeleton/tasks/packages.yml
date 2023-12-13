@@ -45,6 +45,7 @@
       - pigz
       - podman
       - openssl
+      - opi
       - perl-Test-PerlTidy
       - python3-devel
       - python3-virtualenv
@@ -71,6 +72,7 @@
       - xfsprogs
       - xsel
       - wget
+      - whois
       - zip
       - zstd
     state: present
