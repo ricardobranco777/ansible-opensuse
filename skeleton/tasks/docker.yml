@@ -1,0 +1,26 @@
+---
+- name: Install Docker packages
+  zypper:
+    name:
+      - docker
+    state: present
+  tags: ['zypper', 'docker']
+
+- name: Modify /etc/default/grub
+  replace:
+    path: /etc/default/grub
+    regexp: '^(GRUB_CMDLINE_LINUX_DEFAULT="[\w](?!.*\b{{ item }}\b).*)"$'
+    replace: '\1 {{ item }}"'
+  with_items:
+    - "cgroup_enable=memory"
+    - "intel_iommu=1"
+    - "iommu=pt"
+  tags: ['docker']
+
+- name: Enable Docker service
+  systemd_service:
+    name: docker
+    enabled: true
+    masked: no
+    state: started
+  tags: ['docker']

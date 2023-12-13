@@ -1,0 +1,8 @@
+---
+- name: Enable OpenSSH service
+  systemd_service:
+    name: sshd
+    enabled: true
+    masked: no
+    state: started
+  tags: ['ssh']

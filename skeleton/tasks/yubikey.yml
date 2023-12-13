@@ -1,0 +1,12 @@
+---
+- name: Install Yubikey packages
+  zypper:
+    name:
+      - pam_u2f 
+      - pam_yubico
+      - ykpers
+      - yubico-piv-tool
+      - yubikey-manager
+      - yubikey-manager-qt
+    state: present
+  tags: ['zypper', 'yubikey']

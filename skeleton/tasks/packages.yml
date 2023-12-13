@@ -1,0 +1,99 @@
+---
+- name: Perform a dist-upgrade with additional arguments
+  community.general.zypper:
+    name: '*'
+    state: dist-upgrade
+    allow_vendor_change: true
+  tags: ['zypper']
+
+- name: Install packages
+  zypper:
+    name:
+      - avahi-utils
+      - bind-utils
+      - bsdtar
+      - cifs-utils
+      - curl
+      - dejavu-fonts
+      - exfatprogs
+      - e2fsprogs
+      - fakeroot
+      - git
+      - gnome-extensions
+      - gnome-tweaks
+      - go1.21
+      - jetbrains-mono-fonts
+      - jq
+      - keepassxc
+      - libva-utils
+      - lsscsi
+      - lshw
+      - lsof
+      - ltrace
+      - lynx
+      - make
+      - mc
+      - MozillaThunderbird
+      - mozilla-nss-tools
+      - mtr
+      - nautilus-extension-sendto-blueman
+      - netcat-openbsd
+      - net-tools
+      - nextcloud-desktop
+      - nmap
+      - patch
+      - pigz
+      - podman
+      - openssl
+      - perl-Test-PerlTidy
+      - python3-devel
+      - python3-virtualenv
+      - qemu-tools
+      - rclone
+      - rpcbind
+      - rpmconf
+      - rsync
+      - screen
+      - sg3_utils
+      - ShellCheck
+      - smartmontools
+      - socat
+      - strace
+      - subversion
+      - tcpdump
+      - tilix
+      - traceroute
+      - transmission-gtk
+      - unzip
+      - vim
+      - virt-manager
+      - virt-viewer
+      - xfsprogs
+      - xsel
+      - wget
+      - zip
+      - zstd
+    state: present
+    update_cache: true
+  tags: ['zypper']
+
+- name: Install package patterns
+  zypper:
+    name:
+      - container_runtime
+      - devel_C_C++
+      - fonts
+      - laptop
+      - multimedia
+      - kvm_server
+      - kvm_tools
+    type: pattern
+    state: present
+  tags: ['zypper']
+
+- name: Uninstall packages
+  zypper:
+    name:
+      - cups
+    state: absent
+  tags: ['zypper']
