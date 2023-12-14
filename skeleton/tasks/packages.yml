@@ -3,7 +3,6 @@
   community.general.zypper:
     name: '*'
     state: dist-upgrade
-    allow_vendor_change: true
   tags: ['zypper']
 
 - name: Install packages
@@ -69,10 +68,11 @@
       - vim
       - virt-manager
       - virt-viewer
-      - xfsprogs
-      - xsel
+      - vlc
       - wget
       - whois
+      - xfsprogs
+      - xsel
       - zip
       - zstd
     state: present
