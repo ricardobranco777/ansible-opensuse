@@ -1,4 +1,13 @@
 ---
+- name: Add custom openSSH configuration
+  copy:
+    src: ssh/custom.conf
+    dest: /etc/ssh/sshd_config.d/custom.conf
+    owner: root
+    group: root
+    mode: 0600
+  tags: ['ssh']
+
 - name: Enable OpenSSH service
   systemd_service:
     name: sshd
