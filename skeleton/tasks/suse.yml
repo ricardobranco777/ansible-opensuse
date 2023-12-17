@@ -1,0 +1,19 @@
+---
+- name: Install SUSE repo
+  shell: sudo zypper addrepo https://download.opensuse.org/repositories/SUSE:/CA/openSUSE_Tumbleweed/SUSE:CA.repo
+  args:
+    creates: /etc/zypp/repos.d/SUSE_CA.repo
+  tags: ['zypper', 'suse']
+
+- name: Install SUSE key
+  rpm_key:
+    key: https://download.opensuse.org/repositories/SUSE:/CA/openSUSE_Tumbleweed/repodata/repomd.xml.key
+    state: present
+
+- name: Install SUSE packages
+  zypper:
+    name:
+      - ca-certificates-suse
+    state: present
+    update_cache: true
+  tags: ['zypper', 'suse']
