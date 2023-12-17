@@ -19,10 +19,14 @@
     name:
       - ffmpeg
       - gstreamer-plugins-good
+      - gstreamer-plugins-good-extra
       - gstreamer-plugins-bad
+      - gstreamer-plugins-bad-codecs
       - gstreamer-plugins-ugly
+      - gstreamer-plugins-ugly-codecs
       - gstreamer-plugins-libav
       - libavcodec
+      - pipewire-aptx
       - vlc
       - vlc-codecs
     force: true
