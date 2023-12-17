@@ -1,6 +1,6 @@
 ---
 - name: Perform a dist-upgrade with additional arguments
-  community.general.zypper:
+  zypper:
     name: '*'
     state: dist-upgrade
   tags: ['zypper']
@@ -68,7 +68,6 @@
       - vim
       - virt-manager
       - virt-viewer
-      - vlc
       - wget
       - whois
       - xfsprogs

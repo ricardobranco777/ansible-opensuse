@@ -7,6 +7,13 @@
     autorefresh: true
   tags: ['zypper', 'packman']
 
+- name: Perform a dist-upgrade with additional arguments
+  zypper:
+    name: '*'
+    state: dist-upgrade
+    allow_vendor_change: true
+  tags: ['zypper']
+
 - name: Install Packman packages
   zypper:
     name:
@@ -17,6 +24,8 @@
       - gstreamer-plugins-libav
       - libavcodec
       - vlc
+      - vlc-codecs
+    force: true
     state: present
   tags: ['zypper', 'packman']
 
