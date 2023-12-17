@@ -97,5 +97,6 @@
   zypper:
     name:
       - cups
+    clean_deps: true
     state: absent
   tags: ['zypper']
