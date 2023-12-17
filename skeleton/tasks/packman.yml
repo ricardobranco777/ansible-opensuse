@@ -1,0 +1,21 @@
+---
+- name: Install Packman repo
+  zypper_repository:
+    name: packman-essentials
+    repo: 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Essentials/'
+    auto_import_keys: true
+    autorefresh: true
+  tags: ['zypper', 'packman']
+
+- name: Install Packman packages
+  zypper:
+    name:
+      - ffmpeg
+      - gstreamer-plugins-good
+      - gstreamer-plugins-bad
+      - gstreamer-plugins-ugly
+      - gstreamer-plugins-libav
+      - libavcodec
+      - vlc
+    state: present
+  tags: ['zypper', 'packman']
