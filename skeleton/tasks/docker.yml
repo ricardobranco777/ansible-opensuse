@@ -3,6 +3,10 @@
   zypper:
     name:
       - docker
+      - docker-bash-completion
+      - docker-buildx
+      - docker-compose
+      - docker-rootless-extras
     state: present
   tags: ['zypper', 'docker']
 

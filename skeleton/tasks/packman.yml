@@ -26,6 +26,7 @@
       - gstreamer-plugins-ugly-codecs
       - gstreamer-plugins-libav
       - libavcodec
+      - libdvdcss2
       - pipewire-aptx
       - vlc
       - vlc-codecs

@@ -18,19 +18,25 @@
     name:
       - avahi-utils
       - bind-utils
+      - bridge-utils
       - bsdtar
       - cifs-utils
       - curl
       - dejavu-fonts
+      - distrobox
       - e2fsprogs
+      - ed
+      - expect
       - fakeroot
       - git
       - gnome-extensions
       - gnome-tweaks
       - go1.21
+      - ipmitool
       - jetbrains-mono-fonts
       - jq
       - keepassxc
+      - libcap-progs
       - libva-utils
       - lsscsi
       - lshw
@@ -42,7 +48,9 @@
       - MozillaThunderbird
       - mozilla-nss-tools
       - mtr
+      - nautilus-extension-nextcloud
       - nautilus-extension-sendto-blueman
+      - nautilus-extension-tilix
       - netcat-openbsd
       - net-tools
       - nextcloud-desktop
@@ -57,6 +65,7 @@
       - python3-virtualenv
       - qemu-tools
       - rclone
+      - rootlesskit
       - rpcbind
       - rpmconf
       - rsync
@@ -68,6 +77,7 @@
       - strace
       - subversion
       - tcpdump
+      - telnet
       - tilix
       - traceroute
       - transmission-gtk
@@ -78,7 +88,9 @@
       - wget
       - whois
       - xfsprogs
+      - xhost
       - xsel
+      - zerofree
       - zip
       - zstd
     state: present
