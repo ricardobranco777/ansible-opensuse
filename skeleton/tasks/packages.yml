@@ -1,4 +1,12 @@
 ---
+- name: Disable PackageKit
+  systemd_service:
+    name: packagekit
+    enabled: false
+    masked: yes
+    state: stopped
+  tags: ['zypper']
+
 - name: Perform a dist-upgrade with additional arguments
   zypper:
     name: '*'
@@ -14,7 +22,6 @@
       - cifs-utils
       - curl
       - dejavu-fonts
-      - exfatprogs
       - e2fsprogs
       - fakeroot
       - git
