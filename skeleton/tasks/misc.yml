@@ -1,0 +1,9 @@
+---
+- name: Disable suspend on close lid
+  copy:
+    src: systemd/nosuspendonlidclosed.conf
+    dest: /etc/systemd/logind.conf.d/nosuspendonlidclosed.conf
+    owner: root
+    group: root
+    mode: 0644
+  tags: ['misc']

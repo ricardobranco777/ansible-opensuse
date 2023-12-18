@@ -7,4 +7,5 @@
 - include_tasks: yubikey.yml
 - include_tasks: ssh.yml
 - include_tasks: slack.yml
+- include_tasks: misc.yml
 - include_tasks: suse.yml
