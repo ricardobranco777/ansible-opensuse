@@ -105,8 +105,6 @@
       - fonts
       - laptop
       - multimedia
-      - kvm_server
-      - kvm_tools
     type: pattern
     state: present
   tags: ['zypper']
