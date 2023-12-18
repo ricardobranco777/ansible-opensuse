@@ -33,14 +33,6 @@
     state: present
   tags: ['zypper', 'packman']
 
-- name: Install h264 repo
-  zypper_repository:
-    name: repo-openh264
-    repo: 'http://codecs.opensuse.org/openh264/openSUSE_Tumbleweed'
-    auto_import_keys: true
-    autorefresh: true
-  tags: ['zypper', 'packman']
-
 - name: Install h264 packages
   zypper:
     name:
