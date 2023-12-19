@@ -7,3 +7,12 @@
     group: root
     mode: 0644
   tags: ['misc']
+
+- name: Add custom sudo configuration
+  copy:
+    src: sudoers.d/custom
+    dest: /etc/sudoers.d/custom
+    owner: root
+    group: root
+    mode: 0600
+  tags: ['misc']
