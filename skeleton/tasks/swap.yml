@@ -1,0 +1,12 @@
+---
+- name: Create swap file
+  shell: truncate -s 0 /swap && chattr +C /swap && fallocate -l 8G /swap && chmod 600 /swap && mkswap /swap && swapon /swap
+  args:
+    creates: /swap
+  tags: ['swap']
+
+- name: Add /swap to /etc/fstab
+  lineinfile:
+    path: /etc/fstab
+    line: "/swap swap swap defaults 0 0"
+
