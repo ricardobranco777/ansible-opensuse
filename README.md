@@ -17,3 +17,6 @@ TODO:
 sudo -u gdm dbus-launch gsettings set org.gnome.desktop.session idle-delay 0
 sudo -u gdm dbus-launch gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
 ```
+
+NOTES:
+  - This configures a bridge over Ethernet for KVM, so connect to the wireless interface

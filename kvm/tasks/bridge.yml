@@ -1,0 +1,61 @@
+---
+- name: Add custom KVM sysctl's
+  copy:
+    src: sysctl.d/kvm.conf
+    dest: /etc/sysctl.d/kvm.conf
+    owner: root
+    group: root
+    mode: 0644
+  tags: ['kvm', 'sysctl']
+
+- name: Configure /etc/qemu/bridge.conf
+  lineinfile:
+    path: /etc/qemu/bridge.conf
+    line: "allow all"
+  tags: ['kvm']
+
+- name: Configure bridge-br0
+  shell: nmcli con add ifname br0 type bridge con-name bridge-br0
+  args:
+    creates: /etc/NetworkManager/system-connections/bridge-br0.nmconnection
+  tags: ['kvm'] 
+
+- name: Configure bridge-slave
+  shell: "nmcli con add type bridge-slave ifname {{ ethernet_interface }} master br0"
+  args:
+    creates: "/etc/NetworkManager/system-connections/bridge-slave-{{ ethernet_interface }}.nmconnection"
+  tags: ['kvm'] 
+
+- name: Check bridge-stp status
+  command: "nmcli -g bridge.stp con show bridge-br0"
+  register: bridge_stp_status
+  changed_when: false
+  ignore_errors: true
+  tags: ['kvm'] 
+
+- name: Modify bridge settings if needed
+  command: "nmcli con modify bridge-br0 bridge.stp no"
+  when: bridge_stp_status.stdout == "yes"
+  tags: ['kvm'] 
+
+- name: Configure host-bridge
+  shell: "virsh net-define <(echo -e '<network><name>host-bridge</name><forward mode=\"bridge\"/><bridge name=\"br0\"/>\n</network>')"
+  args:
+    executable: /bin/bash
+    creates: /etc/libvirt/qemu/networks/host-bridge.xml
+  tags: ['kvm'] 
+
+- name: Autostart host-bridge
+  shell: virsh net-autostart host-bridge
+  args:
+    creates: /etc/libvirt/qemu/networks/autostart/host-bridge.xml
+  tags: ['kvm'] 
+
+- name: Check AppArmor status for dnsmasq
+  command: "sudo aa-status --json"
+  register: aa_status
+  changed_when: false
+
+- name: Set AppArmor to complain mode if not already in complain mode
+  command: "aa-complain /usr/sbin/dnsmasq"
+  when: "'\"dnsmasq\": \"complain\"' not in aa_status.stdout"
