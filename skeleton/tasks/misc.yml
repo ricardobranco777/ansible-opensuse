@@ -16,3 +16,8 @@
     group: root
     mode: 0600
   tags: ['misc']
+
+- name: Remove stupid blacklist for BSD UFS kernel module
+  file:
+    path: /lib/modprobe.d/60-blacklist_fs-ufs.conf
+    state: absent
