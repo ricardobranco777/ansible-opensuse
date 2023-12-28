@@ -1,0 +1,20 @@
+---
+- name: Install filesystems repo
+  shell: sudo zypper addrepo https://download.opensuse.org/repositories/filesystems/openSUSE_Tumbleweed/filesystems.repo
+  args:
+    creates: /etc/zypp/repos.d/
+  tags: ['zypper', 'zfs']
+
+- name: Install filesystems key
+  rpm_key:
+    key: https://download.opensuse.org/repositories/filesystems/openSUSE_Tumbleweed/repodata/repomd.xml.key
+    state: present
+  tags: ['zypper', 'zfs']
+
+- name: Install ZFS package
+  zypper:
+    name:
+      - zfs
+    state: present
+    update_cache: true
+  tags: ['zypper', 'zfs']

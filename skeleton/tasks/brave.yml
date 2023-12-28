@@ -9,6 +9,7 @@
   rpm_key:
     key: https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
     state: present
+  tags: ['zypper', 'brave']
 
 - name: Install Brave packages
   zypper:
