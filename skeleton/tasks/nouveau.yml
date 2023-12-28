@@ -1,0 +1,18 @@
+---
+- name: Uninstall NVIDIA repos
+  zypper:
+    name:
+      - openSUSE-repos-NVIDIA
+    clean_deps: true
+    state: absent
+  tags: ['zypper']
+
+- name: Install nouveau
+  zypper:
+    name:
+      - Mesa-dri-nouveau
+      - xf86-video-nouveau
+    state: present
+    update_cache: true
+  tags: ['zypper']
+
