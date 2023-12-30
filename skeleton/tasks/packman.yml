@@ -1,4 +1,11 @@
 ---
+- name: Allow vendor change
+  lineinfile:
+    path: /etc/zypp/zypp.conf
+    line: "solver.allowVendorChange = false"
+    insertafter: "^# solver.allowVendorChange "
+  tags: ['zypper']
+
 - name: Install Packman repo
   zypper_repository:
     name: packman-essentials
