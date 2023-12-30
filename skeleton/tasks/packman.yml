@@ -5,6 +5,7 @@
     repo: 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Essentials/'
     auto_import_keys: true
     autorefresh: true
+    priority: 77
   tags: ['zypper', 'packman']
 
 - name: Install Packman packages
