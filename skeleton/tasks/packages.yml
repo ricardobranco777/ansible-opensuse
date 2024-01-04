@@ -10,6 +10,7 @@
 - name: Install packages
   zypper:
     name:
+      - apache2-utils
       - avahi-utils
       - bind-utils
       - bridge-utils
