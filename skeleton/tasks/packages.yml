@@ -46,6 +46,7 @@
       - nautilus-extension-nextcloud
       - nautilus-extension-sendto-blueman
       - nautilus-extension-tilix
+      - ncat
       - netcat-openbsd
       - net-tools
       - nextcloud-desktop
