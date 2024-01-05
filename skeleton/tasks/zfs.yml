@@ -18,3 +18,13 @@
     state: present
     update_cache: true
   tags: ['zypper', 'zfs']
+
+# Ignore zfs on dracut as we don't use it on root and may conflict with the kernel
+- name: Ignore zfs on dracut
+  copy:
+    src: files/88-zfs.conf
+    dest: /etc/dracut.conf.d/88-zfs.conf
+    owner: root
+    group: root
+    mode: 0644
+  tags: ['zfs']
