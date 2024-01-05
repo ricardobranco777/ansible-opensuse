@@ -15,7 +15,9 @@
       - bind-utils
       - bridge-utils
       - bsdtar
+      - buildah
       - cifs-utils
+      - criu
       - curl
       - dejavu-fonts
       - distrobox
@@ -68,6 +70,7 @@
       - screen
       - sg3_utils
       - ShellCheck
+      - skopeo
       - smartmontools
       - socat
       - strace
