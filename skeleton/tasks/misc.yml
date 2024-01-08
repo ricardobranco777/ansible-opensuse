@@ -19,5 +19,6 @@
 
 - name: Remove stupid blacklist for BSD UFS kernel module
   file:
-    path: /lib/modprobe.d/60-blacklist_fs-ufs.conf
-    state: absent
+    src: /dev/null
+    dest: /lib/modprobe.d/60-blacklist_fs-ufs.conf
+    state: link
