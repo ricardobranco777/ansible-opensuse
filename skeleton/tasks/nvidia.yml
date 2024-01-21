@@ -32,3 +32,9 @@
     path: /etc/modprobe.d/nvidia-drm-nomodeset.conf
     regexp: modeset
     line: 'options nvidia_drm modeset=1'
+
+# TODO: Get current type
+- name: Put NVIDIA card into offload mode
+  shell: prime-select offload
+  args:
+    creates: /etc/prime/offload_type
