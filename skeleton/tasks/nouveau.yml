@@ -1,8 +1,9 @@
 ---
-- name: Uninstall NVIDIA repos
+- name: Uninstall NVIDIA repos & SUSE Prime
   zypper:
     name:
       - openSUSE-repos-NVIDIA
+      - suse-prime
     clean_deps: true
     state: absent
   tags: ['zypper']
