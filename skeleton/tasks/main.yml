@@ -11,5 +11,6 @@
 - include_tasks: misc.yml
 - include_tasks: suse.yml
 - include_tasks: swap.yml
-- include_tasks: nouveau.yml
+#- include_tasks: nouveau.yml
+- include_tasks: nvidia.yml
 - include_tasks: zfs.yml
