@@ -22,3 +22,5 @@
     src: /dev/null
     dest: /lib/modprobe.d/60-blacklist_fs-ufs.conf
     state: link
+    force: true
+  tags: ['ufs']
