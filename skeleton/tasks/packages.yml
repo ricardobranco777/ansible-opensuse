@@ -12,6 +12,8 @@
     name:
       - apache2-utils
       - avahi-utils
+      - bcc-examples
+      - bcc-tools
       - bind-utils
       - bridge-utils
       - bsdtar
