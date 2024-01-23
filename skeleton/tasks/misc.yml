@@ -1,4 +1,16 @@
 ---
+- name: Modify /etc/default/grub
+  replace:
+    path: /etc/default/grub
+    regexp: '^(GRUB_CMDLINE_LINUX_DEFAULT="[\w](?!.*\b{{ item }}\b).*)"$'
+    replace: '\1 {{ item }}"'
+  with_items:
+    - "cgroup_enable=memory"
+    - "intel_iommu=on"
+    - "iommu=pt"
+    - "pcie_aspm=off"
+  tags: ['grub']
+
 - name: Disable suspend on close lid
   copy:
     src: systemd/nosuspendonlidclosed.conf
