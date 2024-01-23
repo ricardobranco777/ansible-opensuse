@@ -114,6 +114,8 @@
   zypper:
     name:
       - cups
+      - cups-client
+      - os-prober
     clean_deps: true
     state: absent
   tags: ['zypper']
