@@ -6,6 +6,13 @@
     insertafter: "^# solver.allowVendorChange "
   tags: ['zypper']
 
+- name: Auto agree with licenses
+  lineinfile:
+    path: /etc/zypp/zypper.conf
+    line: "autoAgreeWithLicenses: yes"
+    insertafter: "^# autoAgreeWithLicenses: "
+  tags: ['zypper']
+
 - name: Install Packman repo
   zypper_repository:
     name: packman-essentials
