@@ -55,6 +55,7 @@
       - net-tools
       - nextcloud-desktop
       - nmap
+      - nping
       - patch
       - pigz
       - podman
