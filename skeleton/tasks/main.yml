@@ -15,3 +15,4 @@
 #- include_tasks: nouveau.yml
 - include_tasks: nvidia.yml
 - include_tasks: zfs.yml
+- include_tasks: security.yml
