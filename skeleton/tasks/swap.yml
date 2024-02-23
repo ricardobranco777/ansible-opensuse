@@ -1,12 +1,19 @@
 ---
-- name: Create swap file
-  shell: truncate -s 0 /swap && chattr +C /swap && fallocate -l 8G /swap && chmod 600 /swap && mkswap /swap && swapon /swap
+- name: Create swap subvolume
+  shell: btrfs subvolume create /swap
   args:
     creates: /swap
+  tags: ['swap']
+
+- name: Create swapfile
+  shell: btrfs filesystem mkswapfile --size 8g --uuid clear /swap/swap && swapon /swap/swap
+  #shell: truncate -s 0 /swap/swap && chattr +C /swap/swap && fallocate -l 8G /swap/swap && chmod 600 /swap/swap && mkswap /swap/swap && swapon /swap/swap
+  args:
+    creates: /swap/swap
   tags: ['swap']
 
 - name: Add /swap to /etc/fstab
   lineinfile:
     path: /etc/fstab
-    line: "/swap swap swap defaults 0 0"
-
+    line: "/swap/swap none swap defaults 0 0"
+  tags: ['swap']
