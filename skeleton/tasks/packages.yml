@@ -119,6 +119,7 @@
       - cups
       - cups-client
       - os-prober
+      - xinetd
     clean_deps: true
     state: absent
   tags: ['zypper']
