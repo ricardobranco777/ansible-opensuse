@@ -16,12 +16,14 @@
     state: present
   tags: ['zypper', 'kvm']
 
-- name: Install KVM package patterns
+- name: Install KVM packages
   zypper:
     name:
-      - qemu-*
       - libvirt-daemon
       - kvm_stat
+      - qemu-*
+      - qemu-tools
+      - virtiofsd
     state: present
   tags: ['zypper', 'kvm']
 
