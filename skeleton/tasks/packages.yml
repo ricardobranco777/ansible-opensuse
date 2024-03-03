@@ -35,6 +35,7 @@
       - jetbrains-mono-fonts
       - jq
       - keepassxc
+      - libbsd-devel
       - libcap-progs
       - libva-utils
       - lsscsi
