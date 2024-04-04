@@ -30,7 +30,7 @@
       - git
       - gnome-extensions
       - gnome-tweaks
-      - go
+      - go1.22
       - ipmitool
       - jetbrains-mono-fonts
       - jq
