@@ -14,8 +14,7 @@ Run with:
 TODO:
   - Disable GDM suspend when AC is connected:
 ```
-sudo -u gdm dbus-launch gsettings set org.gnome.desktop.session idle-delay 0
-sudo -u gdm dbus-launch gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
+sudo -u gdm dbus-launch gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type blank
 gsettings set org.gnome.desktop.sound allow-volume-above-100-percent true
 ```
 
