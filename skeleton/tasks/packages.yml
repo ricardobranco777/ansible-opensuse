@@ -83,6 +83,7 @@
       - skopeo
       - smartmontools
       - socat
+      - sqlite3
       - strace
       - subversion
       - tcpdump
