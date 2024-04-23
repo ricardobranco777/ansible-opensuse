@@ -19,6 +19,7 @@
       - bsdtar
       - buildah
       - cifs-utils
+      - clang
       - criu
       - curl
       - dejavu-fonts
@@ -40,6 +41,7 @@
       - libbsd-devel
       - libcap-progs
       - libva-utils
+      - llvm
       - lsscsi
       - lshw
       - lsof
