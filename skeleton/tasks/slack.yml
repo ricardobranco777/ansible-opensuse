@@ -19,3 +19,10 @@
     state: present
     update_cache: true
   tags: ['zypper', 'slack']
+
+- name: Turn off noisy logging by crappy Slack app
+  lineinfile:
+    path: /usr/share/applications/slack.desktop
+    regexp: '^Exec='
+    line: 'Exec=/usr/bin/slack -g warn %U'
+  tags: ['slack']
