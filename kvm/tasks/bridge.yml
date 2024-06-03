@@ -8,11 +8,11 @@
     mode: 0644
   tags: ['kvm', 'sysctl']
 
-- name: Configure /etc/qemu/bridge.conf
-  lineinfile:
-    path: /etc/qemu/bridge.conf
-    line: "allow all"
-  tags: ['kvm']
+#- name: Configure /etc/qemu/bridge.conf
+#  lineinfile:
+#    path: /etc/qemu/bridge.conf
+#    line: "allow all"
+#  tags: ['kvm']
 
 - name: Configure bridge-br0
   shell: nmcli con add ifname br0 type bridge con-name bridge-br0
