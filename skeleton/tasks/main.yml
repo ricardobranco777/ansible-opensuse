@@ -11,7 +11,7 @@
 - include_tasks: ssh.yml
 #- include_tasks: slack.yml
 - include_tasks: suse.yml
-- include_tasks: swap.yml
+- include_tasks: zram.yml
 #- include_tasks: nouveau.yml
 - include_tasks: nvidia.yml
 - include_tasks: zfs.yml

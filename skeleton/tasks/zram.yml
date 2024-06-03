@@ -1,0 +1,22 @@
+---
+- name: Install zram packages
+  zypper:
+    name:
+      - zram-generator
+    state: present
+  tags: ['zram', 'zypper']
+
+- name: Copy zram-generator.conf
+  copy:
+    src: zram-generator.conf
+    dest: /etc/systemd/zram-generator.conf
+    owner: root
+    group: root
+    mode: 0644
+  tags: ['zram'] 
+
+- name: Create zram0 swap
+  shell: systemctl daemon-reload && systemctl start /dev/zram0
+  args:
+    creates: /dev/zram0
+  tags: ['zram']
