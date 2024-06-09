@@ -1,8 +1,8 @@
 ---
 - name: Install filesystems repo
-  shell: sudo zypper addrepo --priority 100 https://download.opensuse.org/repositories/filesystems/openSUSE_Tumbleweed/filesystems.repo
+  shell: zypper addrepo --priority 100 https://download.opensuse.org/repositories/filesystems/openSUSE_Tumbleweed/filesystems.repo
   args:
-    creates: /etc/zypp/repos.d/
+    creates: /etc/zypp/repos.d/filesystems.repo
   tags: ['zypper', 'zfs']
 
 - name: Install filesystems key
