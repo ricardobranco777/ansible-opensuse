@@ -11,11 +11,9 @@ Check:
 Run with:
 `ansible-playbook -v -i inventory main.yml`
 
-TODO:
-  - Disable GDM suspend when AC is connected:
+Disable GDM suspend when AC is connected:
 ```
-sudo -u gdm dbus-launch gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type blank
-gsettings set org.gnome.desktop.sound allow-volume-above-100-percent true
+sudo sudo -u gdm dbus-launch gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type blank
 ```
 
 NOTES:
