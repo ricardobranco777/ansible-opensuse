@@ -14,6 +14,7 @@
   zypper:
     name:
       - ca-certificates-suse
+      - osc
     state: present
     update_cache: true
   tags: ['zypper', 'suse']
