@@ -35,8 +35,6 @@
       - gstreamer-plugins-libav
       - libavcodec
       - pipewire-aptx
-      - vlc
-      - vlc-codecs
     force: true
     state: present
   tags: ['zypper', 'packman']

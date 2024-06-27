@@ -1,0 +1,32 @@
+---
+- name: Allow vendor change
+  lineinfile:
+    path: /etc/zypp/zypp.conf
+    line: "solver.allowVendorChange = false"
+    insertafter: "^# solver.allowVendorChange "
+  tags: ['zypper']
+
+- name: Auto agree with licenses
+  lineinfile:
+    path: /etc/zypp/zypper.conf
+    line: "autoAgreeWithLicenses = yes"
+    insertafter: "^# autoAgreeWithLicenses ="
+  tags: ['zypper']
+
+- name: Install VLC repo
+  zypper_repository:
+    name: vlc
+    repo: 'http://download.videolan.org/pub/vlc/SuSE/Tumbleweed/'
+    auto_import_keys: true
+    autorefresh: true
+    priority: 70
+  tags: ['zypper', 'vlc']
+
+- name: Install VLC packages
+  zypper:
+    name:
+      - vlc
+      - vlc-codecs
+    force: true
+    state: present
+  tags: ['zypper', 'vlc']
