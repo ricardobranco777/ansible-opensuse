@@ -26,6 +26,7 @@
       - distrobox
       - e2fsprogs
       - ed
+      - efitools
       - expect
       - fakeroot
       - gh
