@@ -127,6 +127,7 @@
     name:
       - cups
       - cups-client
+      - emacs
       - os-prober
     clean_deps: true
     state: absent
