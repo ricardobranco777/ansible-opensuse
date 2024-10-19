@@ -18,3 +18,4 @@ sudo sudo -u gdm dbus-launch gsettings set org.gnome.settings-daemon.plugins.pow
 
 NOTES:
   - This configures a bridge over Ethernet for KVM, so connect to the wireless interface
+  - Run `zypper addlock cups cups-client emacs` to avoid unwanted packages
