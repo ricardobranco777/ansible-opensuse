@@ -86,6 +86,7 @@
       - sqlite3
       - strace
       - subversion
+      - switcheroo-control
       - tcpdump
       - telnet
       - tilix

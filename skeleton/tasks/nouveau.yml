@@ -6,7 +6,6 @@
       - nvidia-gl-G06
       - nvidia-video-G06
       - openSUSE-repos-NVIDIA
-      - suse-prime
     clean_deps: true
     state: absent
   tags: ['zypper', 'nouveau']

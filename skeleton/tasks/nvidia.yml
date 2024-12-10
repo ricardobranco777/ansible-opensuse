@@ -18,13 +18,6 @@
     state: present
   tags: ['zypper', 'nvidia']
 
-- name: Install SUSE Prime
-  zypper:
-    name:
-      - suse-prime
-    state: present
-  tags: ['zypper', 'nvidia']
-
 # TODO: Run dracut -f
 - name: Disable NVIDIA modeset
   lineinfile:
