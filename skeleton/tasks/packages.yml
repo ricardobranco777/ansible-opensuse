@@ -63,6 +63,7 @@
       - nmap
       - nping
       - patch
+      - pbzip2
       - pigz
       - podman
       - podman-remote
