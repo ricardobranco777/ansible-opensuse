@@ -8,13 +8,14 @@
     mode: 0600
   tags: ['ssh']
 
-- name: Secure permissions for /etc/ssh/sshd_config.d
-  file:
-    path: /etc/ssh/sshd_config.d
-    state: directory
+- name: Add AllowUsers configuration
+  copy:
+    dest: /etc/ssh/sshd_config.d/users.conf
+    content: |
+      AllowUsers root {{ target_user }}
     owner: root
     group: root
-    mode: '0500'
+    mode: '0600'
   tags: ['ssh']
 
 - name: Enable OpenSSH service

@@ -6,10 +6,10 @@ zypper ansible-galaxy collection install community.general
 ```
 
 Check:
-`ansible-playbook -v -i inventory -C main.yml`
+`ansible-playbook -v -i inventory.yml -C main.yml`
 
 Run with:
-`ansible-playbook -v -i inventory main.yml`
+`ansible-playbook -v -i inventory.yml main.yml`
 
 Disable GDM suspend when AC is connected:
 ```
