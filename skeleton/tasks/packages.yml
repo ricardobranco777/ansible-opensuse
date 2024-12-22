@@ -88,6 +88,7 @@
       - strace
       - subversion
       - switcheroo-control
+      - sysfsutils
       - tcpdump
       - telnet
       - tilix
