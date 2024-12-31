@@ -3,14 +3,12 @@
   rpm_key:
     key: https://packagecloud.io/gpg.key
     state: present
-  tags: ['zypper', 'slack']
 
 - name: Install Slack repo
   zypper_repository:
     name: slack
     repo: 'https://packagecloud.io/slacktechnologies/slack/fedora/21/x86_64'
     auto_import_keys: true
-  tags: ['zypper', 'slack']
 
 - name: Install Slack packages
   zypper:
@@ -18,11 +16,9 @@
       - slack
     state: present
     update_cache: true
-  tags: ['zypper', 'slack']
 
 - name: Turn off noisy logging by crappy Slack app
   lineinfile:
     path: /usr/share/applications/slack.desktop
     regexp: '^Exec='
     line: 'Exec=/usr/bin/slack -g warn %U'
-  tags: ['slack']

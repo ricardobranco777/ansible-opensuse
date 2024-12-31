@@ -9,4 +9,3 @@
       - yubikey-manager
       - yubikey-manager-qt
     state: present
-  tags: ['zypper', 'yubikey']

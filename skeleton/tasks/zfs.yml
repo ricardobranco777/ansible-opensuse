@@ -3,13 +3,11 @@
   shell: zypper addrepo --priority 100 https://download.opensuse.org/repositories/filesystems/openSUSE_Tumbleweed/filesystems.repo
   args:
     creates: /etc/zypp/repos.d/filesystems.repo
-  tags: ['zypper', 'zfs']
 
 - name: Install filesystems key
   rpm_key:
     key: https://download.opensuse.org/repositories/filesystems/openSUSE_Tumbleweed/repodata/repomd.xml.key
     state: present
-  tags: ['zypper', 'zfs']
 
 - name: Install ZFS package
   zypper:
@@ -17,7 +15,6 @@
       - zfs
     state: present
     update_cache: true
-  tags: ['zypper', 'zfs']
 
 # Ignore zfs on dracut as we don't use it on root and may conflict with the kernel
 - name: Ignore zfs on dracut
@@ -27,4 +24,3 @@
     owner: root
     group: root
     mode: 0644
-  tags: ['zfs']

@@ -8,7 +8,6 @@
       - openSUSE-repos-NVIDIA
     clean_deps: true
     state: absent
-  tags: ['zypper', 'nouveau']
 
 - name: Install nouveau
   zypper:
@@ -17,5 +16,4 @@
       - xf86-video-nouveau
     state: present
     update_cache: true
-  tags: ['zypper', 'nouveau']
 

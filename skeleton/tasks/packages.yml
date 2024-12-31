@@ -5,7 +5,6 @@
     enabled: false
     masked: yes
     state: stopped
-  tags: ['zypper']
 
 - name: Install packages
   zypper:
@@ -111,7 +110,6 @@
       - zstd
     state: present
     update_cache: true
-  tags: ['zypper']
 
 - name: Install package patterns
   zypper:
@@ -123,7 +121,6 @@
       - multimedia
     type: pattern
     state: present
-  tags: ['zypper']
 
 - name: Uninstall packages
   zypper:
@@ -135,4 +132,3 @@
       - os-prober
     clean_deps: true
     state: absent
-  tags: ['zypper']

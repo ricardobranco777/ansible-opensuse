@@ -9,7 +9,6 @@
     - "intel_iommu=on"
     - "iommu=pt"
     - "pcie_aspm=off"
-  tags: ['grub']
 
 - name: Disable suspend on close lid
   copy:
@@ -18,7 +17,6 @@
     owner: root
     group: root
     mode: 0644
-  tags: ['misc']
 
 - name: Remove stupid blacklist for BSD UFS kernel module
   file:
@@ -26,4 +24,3 @@
     dest: /usr/lib/modprobe.d/60-blacklist_fs-ufs.conf
     state: link
     force: true
-  tags: ['ufs']

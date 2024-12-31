@@ -4,7 +4,6 @@
     name:
       - systemd-zram-service
     state: present
-  tags: ['zram', 'zypper']
 
 - name: Enable zramswap service
   systemd_service:
@@ -12,4 +11,3 @@
     enabled: true
     masked: no
     state: started
-  tags: ['zram']

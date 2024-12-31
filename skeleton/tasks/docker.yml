@@ -8,7 +8,6 @@
       - docker-compose
       - docker-rootless-extras
     state: present
-  tags: ['zypper', 'docker']
 
 - name: Enable Docker service
   systemd_service:
@@ -16,4 +15,3 @@
     enabled: true
     masked: no
     state: started
-  tags: ['docker']

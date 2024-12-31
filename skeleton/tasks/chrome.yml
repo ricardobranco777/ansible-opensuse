@@ -3,14 +3,12 @@
   rpm_key:
     key: https://dl.google.com/linux/linux_signing_key.pub
     state: present
-  tags: ['zypper', 'chrome']
 
 - name: Install Chrome repo
   zypper_repository:
     name: google-chrome
     repo: 'https://dl.google.com/linux/chrome/rpm/stable/x86_64'
     auto_import_keys: true
-  tags: ['zypper', 'chrome']
 
 - name: Install Chrome packages
   zypper:
@@ -18,4 +16,3 @@
       - google-chrome-stable
     state: present
     update_cache: true
-  tags: ['zypper', 'chrome']

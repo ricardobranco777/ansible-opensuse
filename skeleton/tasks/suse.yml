@@ -3,7 +3,6 @@
   shell: sudo zypper addrepo https://download.opensuse.org/repositories/SUSE:/CA/openSUSE_Tumbleweed/SUSE:CA.repo
   args:
     creates: /etc/zypp/repos.d/SUSE_CA.repo
-  tags: ['zypper', 'suse']
 
 - name: Install SUSE key
   rpm_key:
@@ -17,4 +16,3 @@
       - osc
     state: present
     update_cache: true
-  tags: ['zypper', 'suse']

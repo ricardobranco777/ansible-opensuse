@@ -4,7 +4,6 @@
     name:
       - openSUSE-repos-NVIDIA
     state: present
-  tags: ['zypper', 'nvidia']
 
 - name: Install NVIDIA driver
   zypper:
@@ -16,7 +15,6 @@
     disable_recommends: false
     update_cache: true
     state: present
-  tags: ['zypper', 'nvidia']
 
 # TODO: Run dracut -f
 - name: Disable NVIDIA modeset

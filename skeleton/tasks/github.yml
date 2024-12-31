@@ -3,13 +3,11 @@
   shell: sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo
   args:
     creates: /etc/zypp/repos.d/gh-cli.repo
-  tags: ['zypper', 'github']
 
 - name: Install Github cli key
   rpm_key:
     key: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x23F3D4EA75716059
     state: present
-  tags: ['zypper', 'github']
 
 - name: Install Github cli packages
   zypper:
@@ -17,4 +15,3 @@
       - gh
     state: present
     update_cache: true
-  tags: ['zypper', 'github']

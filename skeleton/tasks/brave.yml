@@ -3,13 +3,11 @@
   shell: sudo zypper addrepo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
   args:
     creates: /etc/zypp/repos.d/brave-browser.repo
-  tags: ['zypper', 'brave']
 
 - name: Install Brave key
   rpm_key:
     key: https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
     state: present
-  tags: ['zypper', 'brave']
 
 - name: Install Brave packages
   zypper:
@@ -17,4 +15,3 @@
       - brave-browser
     state: present
     update_cache: true
-  tags: ['zypper', 'brave']

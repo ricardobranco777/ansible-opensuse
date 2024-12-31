@@ -5,7 +5,6 @@
     groups: libvirt
     append: yes
   become: yes
-  tags: ['zypper', 'kvm']
 
 - name: Install KVM package patterns
   zypper:
@@ -14,7 +13,6 @@
       - kvm_tools
     type: pattern
     state: present
-  tags: ['zypper', 'kvm']
 
 - name: Install KVM packages
   zypper:
@@ -25,6 +23,5 @@
       - qemu-tools
       - virtiofsd
     state: present
-  tags: ['zypper', 'kvm']
 
 - include_tasks: bridge.yml
