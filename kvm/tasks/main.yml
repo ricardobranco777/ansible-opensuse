@@ -24,4 +24,18 @@
       - virtiofsd
     state: present
 
+- name: Copy libvirt-guests configuration
+  copy:
+    src: libvirt-guests
+    dest: /etc/sysconfig/libvirt-guests
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Ensure libvirt-guests service is enabled and started
+  systemd:
+    name: libvirt-guests
+    enabled: yes
+    state: started
+
 - include_tasks: bridge.yml

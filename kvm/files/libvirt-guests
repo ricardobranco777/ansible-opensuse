@@ -1,0 +1,2 @@
+ON_BOOT=start
+ON_SHUTDOWN=shutdown
