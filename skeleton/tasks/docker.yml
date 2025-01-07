@@ -7,7 +7,7 @@
       - docker-buildx
       - docker-compose
       - docker-rootless-extras
-      - iptables-nft
+      - iptables-backend-nft
     state: present
 
 - name: Enable Docker service
