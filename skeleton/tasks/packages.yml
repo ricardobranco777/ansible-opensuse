@@ -39,6 +39,7 @@
       - jq
       - keepassxc
       - libbsd-devel
+      - libcap-ng-utils
       - libcap-progs
       - libva-utils
       - llvm
