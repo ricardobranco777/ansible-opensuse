@@ -33,7 +33,7 @@
       - glab
       - gnome-extensions
       - gnome-tweaks
-      - go1.23
+      - go1.24
       - ipmitool
       - jetbrains-mono-fonts
       - jq
