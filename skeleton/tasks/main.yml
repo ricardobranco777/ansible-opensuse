@@ -9,7 +9,6 @@
 - include_tasks: github.yml
 - include_tasks: yubikey.yml
 - include_tasks: ssh.yml
-#- include_tasks: slack.yml
 - include_tasks: suse.yml
 - include_tasks: zram.yml
 #- include_tasks: nouveau.yml
