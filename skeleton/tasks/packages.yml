@@ -68,7 +68,6 @@
       - pigz
       - podman
       - podman-remote
-      - podmansh
       - openssl
       - opi
       - perl-Test-PerlTidy
