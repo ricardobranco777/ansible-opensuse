@@ -93,6 +93,7 @@
       - telnet
       - tilix
       - tmux
+      - tpm2.0-tools
       - traceroute
       - transmission-gtk
       - unzip
