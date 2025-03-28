@@ -47,7 +47,10 @@
   command: "sudo aa-status --json"
   register: aa_status
   changed_when: false
+  when: ansible_distribution != "openSUSE Tumbleweed"
 
 - name: Set AppArmor to complain mode if not already in complain mode
   command: "aa-complain /usr/sbin/dnsmasq"
-  when: "'\"dnsmasq\": \"complain\"' not in aa_status.stdout"
+  when:
+    - ansible_distribution != "openSUSE Tumbleweed"
+    - "\"dnsmasq\": \"complain\"' not in aa_status.stdout"
