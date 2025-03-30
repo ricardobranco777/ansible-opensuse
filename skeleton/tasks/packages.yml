@@ -24,6 +24,7 @@
       - curl
       - dejavu-fonts
       - distrobox
+      - dmg2img
       - e2fsprogs
       - ed
       - efitools
