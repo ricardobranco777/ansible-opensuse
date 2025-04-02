@@ -21,6 +21,7 @@
       - cifs-utils
       - clang
       - criu
+      - crun
       - curl
       - dejavu-fonts
       - distrobox
