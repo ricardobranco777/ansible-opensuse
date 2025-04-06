@@ -51,6 +51,8 @@
       - ltrace
       - lynx
       - make
+      - man
+      - man-pages
       - mc
       - MozillaThunderbird
       - mozilla-nss-tools
@@ -88,6 +90,7 @@
       - sqlite3
       - strace
       - subversion
+      - sudo
       - switcheroo-control
       - sysfsutils
       - tcpdump
