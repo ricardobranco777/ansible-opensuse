@@ -43,6 +43,7 @@
       - libbsd-devel
       - libcap-ng-utils
       - libcap-progs
+      - libcgroup-tools
       - libva-utils
       - llvm
       - lsscsi
