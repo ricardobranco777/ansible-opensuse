@@ -82,7 +82,6 @@
       - rpcbind
       - rpmconf
       - rsync
-      - screen
       - sg3_utils
       - ShellCheck
       - skopeo
