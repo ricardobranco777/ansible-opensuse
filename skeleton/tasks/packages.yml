@@ -36,6 +36,7 @@
       - gnome-extensions
       - gnome-tweaks
       - go1.24
+      - gperf
       - ipmitool
       - jetbrains-mono-fonts
       - jq
