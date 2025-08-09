@@ -30,6 +30,7 @@
       - efitools
       - expect
       - fakeroot
+      - gdb
       - gh
       - git
       - glab
