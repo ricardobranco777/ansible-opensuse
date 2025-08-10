@@ -11,7 +11,6 @@
     name:
       - apache2-utils
       - avahi-utils
-      - bats
       - bcc-examples
       - bcc-tools
       - bind-utils
