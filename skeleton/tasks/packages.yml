@@ -103,6 +103,7 @@
       - transmission-gtk
       - unzip
       - vim
+      - vim-plugin-bats
       - virt-manager
       - virt-viewer
       - wget
