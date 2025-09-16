@@ -137,6 +137,7 @@
       - cups-client
       - cups-filters
       - emacs
+      - mcelog
       - os-prober
       - postfix
     clean_deps: true
