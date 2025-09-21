@@ -1,0 +1,17 @@
+---
+- name: Install Vivaldi repo
+  shell: sudo zypper addrepo https://repo.vivaldi.com/archive/vivaldi-suse.repo
+  args:
+    creates: /etc/zypp/repos.d/vivaldi-suse.repo
+
+- name: Install Vivaldi key
+  rpm_key:
+    key: https://repo.vivaldi.com/archive/linux_signing_key.pub
+    state: present
+
+- name: Install Vivaldi packages
+  zypper:
+    name:
+      - vivaldi-stable
+    state: present
+    update_cache: true
