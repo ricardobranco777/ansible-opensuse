@@ -5,7 +5,6 @@
 - include_tasks: misc.yml
 - include_tasks: docker.yml
 - include_tasks: chrome.yml
-- include_tasks: brave.yml
 - include_tasks: github.yml
 - include_tasks: yubikey.yml
 - include_tasks: ssh.yml
