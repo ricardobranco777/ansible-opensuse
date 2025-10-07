@@ -138,6 +138,8 @@
       - cups-client
       - cups-filters
       - emacs
+      - gimp
+      - libreoffice
       - mcelog
       - os-prober
       - postfix
