@@ -104,6 +104,7 @@
       - unzip
       - vim
       - vim-plugin-bats
+      - virt-firmware
       - virt-manager
       - virt-viewer
       - wget
