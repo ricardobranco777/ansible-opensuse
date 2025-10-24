@@ -19,6 +19,7 @@
       - buildah
       - cifs-utils
       - clang
+      - crane
       - criu
       - crun
       - curl
