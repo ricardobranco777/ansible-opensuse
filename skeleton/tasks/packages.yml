@@ -10,6 +10,7 @@
   zypper:
     name:
       - apache2-utils
+      - automake
       - avahi-utils
       - bcc-examples
       - bcc-tools
@@ -34,6 +35,7 @@
       - gh
       - git
       - glab
+      - glibc-devel-static
       - gnome-extensions
       - gnome-tweaks
       - go1.24
