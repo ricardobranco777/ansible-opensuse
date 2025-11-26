@@ -18,6 +18,7 @@
       - bridge-utils
       - bsdtar
       - buildah
+      - chrony
       - cifs-utils
       - clang
       - crane

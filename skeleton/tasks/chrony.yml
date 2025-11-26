@@ -1,0 +1,6 @@
+---
+- name: Enable chrony
+  systemd_service:
+    name: chronyd
+    enabled: true
+    state: started
