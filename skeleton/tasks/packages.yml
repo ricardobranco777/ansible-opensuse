@@ -74,6 +74,7 @@
       - pigz
       - podman
       - podman-remote
+      - python3-gpg
       - openssl
       - opi
       - perl-Test-PerlTidy
