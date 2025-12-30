@@ -41,7 +41,7 @@
       - glibc-utils
       - gnome-extensions
       - gnome-tweaks
-      - go1.24
+      - go1.25
       - ipmitool
       - jetbrains-mono-fonts
       - jq
