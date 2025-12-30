@@ -38,6 +38,7 @@
       - git
       - glab
       - glibc-devel-static
+      - glibc-utils
       - gnome-extensions
       - gnome-tweaks
       - go1.24
