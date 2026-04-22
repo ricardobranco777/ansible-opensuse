@@ -145,6 +145,7 @@
       - libreoffice
       - mcelog
       - os-prober
+      - PackageKit
       - postfix
     clean_deps: true
     state: absent
