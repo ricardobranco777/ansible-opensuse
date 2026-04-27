@@ -144,6 +144,8 @@
       - gimp
       - libreoffice
       - mcelog
+      - ntfs-3g
+      - ntfsprogs
       - os-prober
       - PackageKit
       - postfix
