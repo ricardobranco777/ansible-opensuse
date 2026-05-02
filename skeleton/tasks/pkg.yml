@@ -146,6 +146,7 @@
       - mcelog
       - ntfs-3g
       - ntfsprogs
+      - OpenSMTPD
       - os-prober
       - PackageKit
       - postfix
