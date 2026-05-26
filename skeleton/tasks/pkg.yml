@@ -135,10 +135,12 @@
 - name: Uninstall packages
   zypper:
     name:
+      - at
       - cups
       - cups-client
       - cups-filters
       - emacs
+      - fuse
       - gimp
       - libreoffice
       - mcelog
