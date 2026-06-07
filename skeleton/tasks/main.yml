@@ -7,10 +7,8 @@
 - include_tasks: chrome.yml
 - include_tasks: github.yml
 - include_tasks: yubikey.yml
-- include_tasks: ssh.yml
 - include_tasks: suse.yml
 - include_tasks: zram.yml
 #- include_tasks: nouveau.yml
 - include_tasks: nvidia.yml
 - include_tasks: zfs.yml
-- include_tasks: security.yml
