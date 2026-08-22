@@ -39,7 +39,7 @@
       - glibc-utils
       - gnome-extensions
       - gnome-tweaks
-      - go1.26
+      - go1.27
       - ipmitool
       - jetbrains-mono-fonts
       - jq
