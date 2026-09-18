@@ -11,6 +11,7 @@
     # openSUSE doesn't set CONFIG_HARDENED_USERCOPY_DEFAULT_ON unlike most distros
     - "hardened_usercopy=1"
     # openSUSE & Ubuntu don't set CONFIG_INIT_ON_ALLOC_DEFAULT_ON unlike Debian & Fedora
+    # See https://github.com/openzfs/zfs/issues/9910 for possible ZFS ARC throughput issues
     - "init_on_alloc=1"
 
 - name: Disable suspend on close lid
