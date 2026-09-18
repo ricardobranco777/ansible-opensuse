@@ -8,6 +8,8 @@
     - "cgroup_enable=memory"
     - "intel_iommu=on"
     - "iommu=pt"
+    # openSUSE doesn't set CONFIG_HARDENED_USERCOPY_DEFAULT_ON unlike most distros
+    - "hardened_usercopy=1"
 
 - name: Disable suspend on close lid
   copy:
