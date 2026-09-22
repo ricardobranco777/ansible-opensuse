@@ -1,0 +1,13 @@
+{
+  "experimental": true,
+  "firewall-backend": "nftables",
+  "fixed-cidr-v6": "2001:db8:1::/64",
+  "icc": false,
+  "init": true,
+  "ip-forward": true,
+  "ipv6": true,
+  "live-restore": true,
+  "selinux-enabled": true,
+  "userland-proxy": false,
+  "userns-remap": "default"
+}

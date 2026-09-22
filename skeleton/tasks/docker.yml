@@ -10,6 +10,24 @@
       - iptables-backend-nft
     state: present
 
+- name: Copy daemon.json
+  copy:
+    src: docker/daemon.json
+    dest: /etc/docker/daemon.json
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Copy sysctl files
+  copy:
+    src: "sysctl.d/{{ item }}"
+    dest: "/etc/sysctl.d/{{ item }}"
+    owner: root
+    group: root
+    mode: "0600"
+  loop:
+    - 99-docker.conf
+
 - name: Enable Docker service
   systemd_service:
     name: docker
