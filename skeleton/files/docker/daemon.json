@@ -1,4 +1,9 @@
 {
+  "default-ulimits": {
+    "core": { "Name": "core", "Hard": 0, "Soft": 0 },
+    "nofile": { "Name": "nofile", "Soft": 1048576, "Hard": 1048576 },
+    "nproc":  { "Name": "nproc",  "Soft": 1048576, "Hard": 1048576 }
+  },
   "experimental": true,
   "firewall-backend": "nftables",
   "fixed-cidr-v6": "2001:db8:1::/64",
@@ -8,6 +13,5 @@
   "ipv6": true,
   "live-restore": true,
   "selinux-enabled": true,
-  "userland-proxy": false,
-  "userns-remap": "default"
+  "userland-proxy": false
 }
