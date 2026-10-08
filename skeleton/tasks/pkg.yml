@@ -19,7 +19,6 @@
       - cifs-utils
       - clang
       - crane
-      - criu
       - curl
       - dejavu-fonts
       - dropbox-cli
