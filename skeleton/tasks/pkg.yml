@@ -42,6 +42,7 @@
       - jq
       - keepassxc
       - libbsd-devel
+      - libcap-devel
       - libcap-ng-utils
       - libcap-progs
       - libcgroup-tools
